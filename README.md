@@ -9,4 +9,4 @@ In this repository you will find
 
 Here is [a link to where to download PsychoPy](http://psychopy.org/installation.html)
 
-Please email j.brand [at] lancaster [.] ac [.] uk if you have any questions
+Please email **j.brand [at] lancaster [.] ac [.] uk** if you have any questions
