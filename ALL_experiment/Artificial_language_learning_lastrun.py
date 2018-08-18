@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy2 Experiment Builder (v1.85.1),
-    on Sat Aug 18 23:26:46 2018
+    on Sat Aug 18 23:48:01 2018
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -94,10 +94,16 @@ image_train1 = visual.ImageStim(
     texRes=128, interpolate=True, depth=0.0)
 label_train1 = visual.TextStim(win=win, name='label_train1',
     text='default text',
-    font='Arial',
+    font=u'Arial',
     pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1,
+    color=u'black', colorSpace='rgb', opacity=1,
     depth=-1.0);
+text_3 = visual.TextStim(win=win, name='text_3',
+    text='default text',
+    font=u'Arial',
+    pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
+    color=u'black', colorSpace='rgb', opacity=1,
+    depth=-2.0);
 
 # Initialize components for Routine "train_input"
 train_inputClock = core.Clock()
@@ -119,9 +125,9 @@ instr3 = visual.TextStim(win=win, name='instr3',
 fixation1Clock = core.Clock()
 fix1 = visual.TextStim(win=win, name='fix1',
     text=None,
-    font='Arial',
+    font=u'Arial',
     pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1,
+    color=u'black', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "test_instructions"
@@ -156,13 +162,13 @@ text = visual.TextStim(win=win, name='text',
     color='black', colorSpace='rgb', opacity=1,
     depth=-4.0);
 
-# Initialize components for Routine "fixation1"
-fixation1Clock = core.Clock()
-fix1 = visual.TextStim(win=win, name='fix1',
+# Initialize components for Routine "fixation2"
+fixation2Clock = core.Clock()
+fix2 = visual.TextStim(win=win, name='fix2',
     text=None,
-    font='Arial',
-    pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color='black', colorSpace='rgb', opacity=1,
+    font=u'Arial',
+    pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
+    color=u'white', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "end"
@@ -325,9 +331,9 @@ for thisComponent in instructions2Components:
 routineTimer.reset()
 
 # set up handler to look after randomisation of conditions etc
-trials = data.TrialHandler(nReps=2, method='random', 
+trials = data.TrialHandler(nReps=4, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('Train/Trials_list.csv'),
+    trialList=data.importConditions('Train/Trials_list.csv', selection=u'0:1'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -348,12 +354,13 @@ for thisTrial in trials:
     train_displayClock.reset()  # clock
     frameN = -1
     continueRoutine = True
-    routineTimer.add(4.500000)
+    routineTimer.add(7.500000)
     # update component parameters for each repeat
     image_train1.setImage(img_train)
     label_train1.setText(label1)
+    text_3.setText(label1)
     # keep track of which components have finished
-    train_displayComponents = [image_train1, label_train1]
+    train_displayComponents = [image_train1, label_train1, text_3]
     for thisComponent in train_displayComponents:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
@@ -366,24 +373,34 @@ for thisTrial in trials:
         # update/draw components on each frame
         
         # *image_train1* updates
-        if t >= 0.0 and image_train1.status == NOT_STARTED:
+        if t >= 1.5 and image_train1.status == NOT_STARTED:
             # keep track of start time/frame for later
             image_train1.tStart = t
             image_train1.frameNStart = frameN  # exact frame index
             image_train1.setAutoDraw(True)
-        frameRemains = 0.0 + 4.5- win.monitorFramePeriod * 0.75  # most of one frame period left
+        frameRemains = 1.5 + 6- win.monitorFramePeriod * 0.75  # most of one frame period left
         if image_train1.status == STARTED and t >= frameRemains:
             image_train1.setAutoDraw(False)
         
         # *label_train1* updates
-        if t >= 1.5 and label_train1.status == NOT_STARTED:
+        if t >= 3 and label_train1.status == NOT_STARTED:
             # keep track of start time/frame for later
             label_train1.tStart = t
             label_train1.frameNStart = frameN  # exact frame index
             label_train1.setAutoDraw(True)
-        frameRemains = 1.5 + 3- win.monitorFramePeriod * 0.75  # most of one frame period left
+        frameRemains = 3 + 4.5- win.monitorFramePeriod * 0.75  # most of one frame period left
         if label_train1.status == STARTED and t >= frameRemains:
             label_train1.setAutoDraw(False)
+        
+        # *text_3* updates
+        if t >= 0.0 and text_3.status == NOT_STARTED:
+            # keep track of start time/frame for later
+            text_3.tStart = t
+            text_3.frameNStart = frameN  # exact frame index
+            text_3.setAutoDraw(True)
+        frameRemains = 0.0 + 1.5- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if text_3.status == STARTED and t >= frameRemains:
+            text_3.setAutoDraw(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
@@ -578,7 +595,7 @@ for thisTrial in trials:
             thisComponent.setAutoDraw(False)
     thisExp.nextEntry()
     
-# completed 2 repeats of 'trials'
+# completed 4 repeats of 'trials'
 
 
 # ------Prepare to start Routine "test_instructions"-------
@@ -794,41 +811,41 @@ for thisTrial_2 in trials_2:
     # the Routine "test_input" was not non-slip safe, so reset the non-slip timer
     routineTimer.reset()
     
-    # ------Prepare to start Routine "fixation1"-------
+    # ------Prepare to start Routine "fixation2"-------
     t = 0
-    fixation1Clock.reset()  # clock
+    fixation2Clock.reset()  # clock
     frameN = -1
     continueRoutine = True
-    routineTimer.add(0.500000)
+    routineTimer.add(1.000000)
     # update component parameters for each repeat
     # keep track of which components have finished
-    fixation1Components = [fix1]
-    for thisComponent in fixation1Components:
+    fixation2Components = [fix2]
+    for thisComponent in fixation2Components:
         if hasattr(thisComponent, 'status'):
             thisComponent.status = NOT_STARTED
     
-    # -------Start Routine "fixation1"-------
+    # -------Start Routine "fixation2"-------
     while continueRoutine and routineTimer.getTime() > 0:
         # get current time
-        t = fixation1Clock.getTime()
+        t = fixation2Clock.getTime()
         frameN = frameN + 1  # number of completed frames (so 0 is the first frame)
         # update/draw components on each frame
         
-        # *fix1* updates
-        if t >= 0.0 and fix1.status == NOT_STARTED:
+        # *fix2* updates
+        if t >= 0.0 and fix2.status == NOT_STARTED:
             # keep track of start time/frame for later
-            fix1.tStart = t
-            fix1.frameNStart = frameN  # exact frame index
-            fix1.setAutoDraw(True)
-        frameRemains = 0.0 + 0.5- win.monitorFramePeriod * 0.75  # most of one frame period left
-        if fix1.status == STARTED and t >= frameRemains:
-            fix1.setAutoDraw(False)
+            fix2.tStart = t
+            fix2.frameNStart = frameN  # exact frame index
+            fix2.setAutoDraw(True)
+        frameRemains = 0.0 + 1- win.monitorFramePeriod * 0.75  # most of one frame period left
+        if fix2.status == STARTED and t >= frameRemains:
+            fix2.setAutoDraw(False)
         
         # check if all components have finished
         if not continueRoutine:  # a component has requested a forced-end of Routine
             break
         continueRoutine = False  # will revert to True if at least one component still running
-        for thisComponent in fixation1Components:
+        for thisComponent in fixation2Components:
             if hasattr(thisComponent, "status") and thisComponent.status != FINISHED:
                 continueRoutine = True
                 break  # at least one component has not yet finished
@@ -841,8 +858,8 @@ for thisTrial_2 in trials_2:
         if continueRoutine:  # don't flip if this routine is over or we'll get a blank screen
             win.flip()
     
-    # -------Ending Routine "fixation1"-------
-    for thisComponent in fixation1Components:
+    # -------Ending Routine "fixation2"-------
+    for thisComponent in fixation2Components:
         if hasattr(thisComponent, "setAutoDraw"):
             thisComponent.setAutoDraw(False)
     thisExp.nextEntry()

@@ -111,7 +111,7 @@
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="image_train1" valType="code"/>
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="stopVal" updates="constant" val="4.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="6" valType="code"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="pos" updates="constant" val="(0, 200)" valType="code"/>
@@ -122,7 +122,7 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="startVal" updates="None" val="1.5" valType="code"/>
         <Param name="image" updates="set every repeat" val="$img_train" valType="str"/>
         <Param name="size" updates="constant" val="(300, 300)" valType="code"/>
       </ImageComponent>
@@ -133,7 +133,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="text" updates="set every repeat" val="$label1" valType="str"/>
-        <Param name="stopVal" updates="constant" val="3" valType="code"/>
+        <Param name="stopVal" updates="constant" val="4.5" valType="code"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -142,7 +142,27 @@
         <Param name="startType" updates="None" val="time (s)" valType="str"/>
         <Param name="ori" updates="constant" val="0" valType="code"/>
         <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
-        <Param name="startVal" updates="None" val="1.5" valType="code"/>
+        <Param name="startVal" updates="None" val="3" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+      </TextComponent>
+      <TextComponent name="text_3">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="text_3" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="black" valType="str"/>
+        <Param name="text" updates="set every repeat" val="$label1" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1.5" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
         <Param name="font" updates="constant" val="Arial" valType="str"/>
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
       </TextComponent>
@@ -361,6 +381,28 @@
         <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
       </TextComponent>
     </Routine>
+    <Routine name="fixation2">
+      <TextComponent name="fix2">
+        <Param name="opacity" updates="constant" val="1" valType="code"/>
+        <Param name="colorSpace" updates="constant" val="rgb" valType="str"/>
+        <Param name="name" updates="None" val="fix2" valType="code"/>
+        <Param name="wrapWidth" updates="constant" val="" valType="code"/>
+        <Param name="color" updates="constant" val="white" valType="str"/>
+        <Param name="text" updates="constant" val="" valType="str"/>
+        <Param name="stopVal" updates="constant" val="1" valType="code"/>
+        <Param name="durationEstim" updates="None" val="" valType="code"/>
+        <Param name="pos" updates="constant" val="(0, 0)" valType="code"/>
+        <Param name="flip" updates="constant" val="" valType="str"/>
+        <Param name="startEstim" updates="None" val="" valType="code"/>
+        <Param name="units" updates="None" val="from exp settings" valType="str"/>
+        <Param name="startType" updates="None" val="time (s)" valType="str"/>
+        <Param name="ori" updates="constant" val="0" valType="code"/>
+        <Param name="stopType" updates="None" val="duration (s)" valType="str"/>
+        <Param name="startVal" updates="None" val="0.0" valType="code"/>
+        <Param name="font" updates="constant" val="Arial" valType="str"/>
+        <Param name="letterHeight" updates="constant" val="0.1" valType="code"/>
+      </TextComponent>
+    </Routine>
     <Routine name="instuctions">
       <StaticComponent name="ISI">
         <Param name="code" updates="None" val="" valType="code"/>
@@ -419,10 +461,10 @@
       <Param name="isTrials" updates="None" val="True" valType="bool"/>
       <Param name="random seed" updates="None" val="" valType="code"/>
       <Param name="loopType" updates="None" val="random" valType="str"/>
-      <Param name="nReps" updates="None" val="3" valType="code"/>
+      <Param name="nReps" updates="None" val="4" valType="code"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="conditions" updates="None" val="[{'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'mipuwe', 'Freq1': u'high', 'img_train': u'Stims/p4.bmp'}, {'label1': u'mipuwe', 'Freq1': u'high', 'img_train': u'Stims/p4.bmp'}, {'label1': u'hekipo', 'Freq1': u'med', 'img_train': u'Stims/p5.bmp'}, {'label1': u'hekipo', 'Freq1': u'med', 'img_train': u'Stims/p5.bmp'}, {'label1': u'gulika', 'Freq1': u'med', 'img_train': u'Stims/p6.bmp'}, {'label1': u'gulika', 'Freq1': u'med', 'img_train': u'Stims/p6.bmp'}, {'label1': u'howine', 'Freq1': u'med', 'img_train': u'Stims/p7.bmp'}, {'label1': u'howine', 'Freq1': u'med', 'img_train': u'Stims/p7.bmp'}, {'label1': u'womeku', 'Freq1': u'low', 'img_train': u'Stims/p8.bmp'}, {'label1': u'lamupo', 'Freq1': u'low', 'img_train': u'Stims/p9.bmp'}, {'label1': u'kugowi', 'Freq1': u'low', 'img_train': u'Stims/pp1.bmp'}, {'label1': u'pigalo', 'Freq1': u'low', 'img_train': u'Stims/pp2.bmp'}]" valType="str"/>
-      <Param name="Selected rows" updates="None" val="" valType="str"/>
+      <Param name="Selected rows" updates="None" val="0:1" valType="str"/>
     </LoopInitiator>
     <Routine name="train_display"/>
     <Routine name="train_input"/>
@@ -441,7 +483,7 @@
       <Param name="Selected rows" updates="None" val="" valType="str"/>
     </LoopInitiator>
     <Routine name="test_input"/>
-    <Routine name="fixation1"/>
+    <Routine name="fixation2"/>
     <LoopTerminator name="trials_2"/>
     <Routine name="end"/>
   </Flow>
