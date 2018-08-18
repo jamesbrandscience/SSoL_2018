@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy2 Experiment Builder (v1.85.1),
-    on Wed Aug 15 15:40:34 2018
+    on Sat Aug 18 23:26:46 2018
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -26,7 +26,7 @@ _thisDir = os.path.dirname(os.path.abspath(__file__)).decode(sys.getfilesystemen
 os.chdir(_thisDir)
 
 # Store info about the experiment session
-expName = u'Artificial_language_learning'  # from the Builder filename that created this script
+expName = 'Artificial_language_learning'  # from the Builder filename that created this script
 expInfo = {u'session': u'001', u'participant': u''}
 dlg = gui.DlgFromDict(dictionary=expInfo, title=expName)
 if dlg.OK == False:
@@ -69,18 +69,18 @@ instuctionsClock = core.Clock()
 ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
 instr1 = visual.TextStim(win=win, name='instr1',
     text=u'\ufeff\nWelcome to the planet Alpha-3-6a in a galaxy far, far away. We have encountered an intelligent alien life form with its own form of language. You must try to learn this language as best you can.\n\nDon\u2019t worry if you feel overwhelmed\u2014the alien knows that this is a difficult task for you to master, and it will do its best to understand everything that you say. \n\n\npress SPACE to continue.\n',
-    font=u'Arial',
+    font='Arial',
     pos=[0, 0], height=0.075, wrapWidth=1.8, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=-1.0);
 
 # Initialize components for Routine "instructions2"
 instructions2Clock = core.Clock()
 inst2 = visual.TextStim(win=win, name='inst2',
     text=u'\ufeff\nAs part of your training, you will see a series of pictures and the word the alien would use to describe those pictures. After being shown a picture and the word, you will be asked to retype the word you just saw.\u2028\n\nOnce your training is complete, the alien will test you on how well you have learnt the language, this will be done by only showing you the picture and you have to type in the word you think the alien uses to describe it.\n\n\npress SPACE to continue.',
-    font=u'Arial',
+    font='Arial',
     pos=(0, 0), height=0.075, wrapWidth=1.8, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "train_display"
@@ -94,9 +94,9 @@ image_train1 = visual.ImageStim(
     texRes=128, interpolate=True, depth=0.0)
 label_train1 = visual.TextStim(win=win, name='label_train1',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=-1.0);
 
 # Initialize components for Routine "train_input"
@@ -104,33 +104,33 @@ train_inputClock = core.Clock()
 inputText = ""
 retype1 = visual.TextStim(win=win, name='retype1',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=[-0.1, -0.2], height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=-1.0);
 instr3 = visual.TextStim(win=win, name='instr3',
-    text=u'Please retype the word you just saw and press ENTER',
-    font=u'Arial',
+    text='Please retype the word you just saw and press ENTER',
+    font='Arial',
     pos=(0, 0.4), height=0.075, wrapWidth=1.8, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=-3.0);
 
 # Initialize components for Routine "fixation1"
 fixation1Clock = core.Clock()
 fix1 = visual.TextStim(win=win, name='fix1',
     text=None,
-    font=u'Arial',
+    font='Arial',
     pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "test_instructions"
 test_instructionsClock = core.Clock()
 instr4 = visual.TextStim(win=win, name='instr4',
-    text=u'You will now only be shown the image and your task is to type the word you think went with that image.\n\nAlways type a word you think could be part of the language, never leave it blank.\n\nPress SPACE to continue',
-    font=u'Arial',
+    text='You will now only be shown the image and your task is to type the word you think went with that image.\n\nAlways type a word you think could be part of the language, never leave it blank.\n\nPress SPACE to continue',
+    font='Arial',
     pos=(0, 0), height=0.075, wrapWidth=1.8, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "test_input"
@@ -138,9 +138,9 @@ test_inputClock = core.Clock()
 testText = ""
 retype_test = visual.TextStim(win=win, name='retype_test',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=[-0.1, -0.2], height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=-1.0);
 img_test1 = visual.ImageStim(
     win=win, name='img_test1',units='pix', 
@@ -150,28 +150,28 @@ img_test1 = visual.ImageStim(
     flipHoriz=False, flipVert=False,
     texRes=128, interpolate=True, depth=-2.0)
 text = visual.TextStim(win=win, name='text',
-    text=u'Type the word you think described this image',
-    font=u'Arial',
+    text='Type the word you think described this image',
+    font='Arial',
     pos=(0, -0.5), height=0.075, wrapWidth=1.8, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=-4.0);
 
 # Initialize components for Routine "fixation1"
 fixation1Clock = core.Clock()
 fix1 = visual.TextStim(win=win, name='fix1',
     text=None,
-    font=u'Arial',
+    font='Arial',
     pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "end"
 endClock = core.Clock()
 text_2 = visual.TextStim(win=win, name='text_2',
-    text=u'Check the results file in the data sub folder',
-    font=u'Arial',
+    text='Check the results file in the data sub folder',
+    font='Arial',
     pos=[0, 0], height=0.075, wrapWidth=1.8, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Create some handy timers
@@ -327,7 +327,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=2, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'Train/Trials_list.csv'),
+    trialList=data.importConditions('Train/Trials_list.csv'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -653,7 +653,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials_2 = data.TrialHandler(nReps=1, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions(u'Train/Test_list.csv'),
+    trialList=data.importConditions('Train/Test_list.csv'),
     seed=None, name='trials_2')
 thisExp.addLoop(trials_2)  # add the loop to the experiment
 thisTrial_2 = trials_2.trialList[0]  # so we can initialise stimuli with some values
