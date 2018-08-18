@@ -4,7 +4,7 @@ Materials for students at the Summer School of Linguistics in Kroměříž, Augu
 In this repository you will find
 
 * pdf slides for the lecture on experimental diachronics
-* pdf slides for the artificial language learning workshop
+* sub-folders for pdf and powerpoint (ppt) slides for the artificial language learning workshop
 * sub-folder for an artificial language learning experiment (PsychoPy file, stimuli, trial information)
 
 Here is [a link to where to download PsychoPy](http://psychopy.org/installation.html)
