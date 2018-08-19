@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy2 Experiment Builder (v1.85.1),
-    on Sat Aug 18 23:48:01 2018
+    on Sun Aug 19 13:02:16 2018
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -100,9 +100,9 @@ label_train1 = visual.TextStim(win=win, name='label_train1',
     depth=-1.0);
 text_3 = visual.TextStim(win=win, name='text_3',
     text='default text',
-    font=u'Arial',
+    font='Arial',
     pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=-2.0);
 
 # Initialize components for Routine "train_input"
@@ -125,9 +125,9 @@ instr3 = visual.TextStim(win=win, name='instr3',
 fixation1Clock = core.Clock()
 fix1 = visual.TextStim(win=win, name='fix1',
     text=None,
-    font=u'Arial',
+    font='Arial',
     pos=(0, -0.2), height=0.1, wrapWidth=None, ori=0, 
-    color=u'black', colorSpace='rgb', opacity=1,
+    color='black', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "test_instructions"
@@ -166,9 +166,9 @@ text = visual.TextStim(win=win, name='text',
 fixation2Clock = core.Clock()
 fix2 = visual.TextStim(win=win, name='fix2',
     text=None,
-    font=u'Arial',
+    font='Arial',
     pos=(0, 0), height=0.1, wrapWidth=None, ori=0, 
-    color=u'white', colorSpace='rgb', opacity=1,
+    color='white', colorSpace='rgb', opacity=1,
     depth=0.0);
 
 # Initialize components for Routine "end"
@@ -333,7 +333,7 @@ routineTimer.reset()
 # set up handler to look after randomisation of conditions etc
 trials = data.TrialHandler(nReps=4, method='random', 
     extraInfo=expInfo, originPath=-1,
-    trialList=data.importConditions('Train/Trials_list.csv', selection=u'0:1'),
+    trialList=data.importConditions('Train/Trials_list.csv'),
     seed=None, name='trials')
 thisExp.addLoop(trials)  # add the loop to the experiment
 thisTrial = trials.trialList[0]  # so we can initialise stimuli with some values
@@ -354,7 +354,7 @@ for thisTrial in trials:
     train_displayClock.reset()  # clock
     frameN = -1
     continueRoutine = True
-    routineTimer.add(7.500000)
+    routineTimer.add(6.500000)
     # update component parameters for each repeat
     image_train1.setImage(img_train)
     label_train1.setText(label1)
@@ -378,7 +378,7 @@ for thisTrial in trials:
             image_train1.tStart = t
             image_train1.frameNStart = frameN  # exact frame index
             image_train1.setAutoDraw(True)
-        frameRemains = 1.5 + 6- win.monitorFramePeriod * 0.75  # most of one frame period left
+        frameRemains = 1.5 + 5- win.monitorFramePeriod * 0.75  # most of one frame period left
         if image_train1.status == STARTED and t >= frameRemains:
             image_train1.setAutoDraw(False)
         
@@ -388,7 +388,7 @@ for thisTrial in trials:
             label_train1.tStart = t
             label_train1.frameNStart = frameN  # exact frame index
             label_train1.setAutoDraw(True)
-        frameRemains = 3 + 4.5- win.monitorFramePeriod * 0.75  # most of one frame period left
+        frameRemains = 3 + 3.5- win.monitorFramePeriod * 0.75  # most of one frame period left
         if label_train1.status == STARTED and t >= frameRemains:
             label_train1.setAutoDraw(False)
         

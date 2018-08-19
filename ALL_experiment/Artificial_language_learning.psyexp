@@ -111,7 +111,7 @@
         <Param name="flipHoriz" updates="constant" val="False" valType="bool"/>
         <Param name="name" updates="None" val="image_train1" valType="code"/>
         <Param name="color" updates="constant" val="$[1,1,1]" valType="str"/>
-        <Param name="stopVal" updates="constant" val="6" valType="code"/>
+        <Param name="stopVal" updates="constant" val="5" valType="code"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="mask" updates="constant" val="None" valType="str"/>
         <Param name="pos" updates="constant" val="(0, 200)" valType="code"/>
@@ -133,7 +133,7 @@
         <Param name="wrapWidth" updates="constant" val="" valType="code"/>
         <Param name="color" updates="constant" val="black" valType="str"/>
         <Param name="text" updates="set every repeat" val="$label1" valType="str"/>
-        <Param name="stopVal" updates="constant" val="4.5" valType="code"/>
+        <Param name="stopVal" updates="constant" val="3.5" valType="code"/>
         <Param name="durationEstim" updates="None" val="" valType="code"/>
         <Param name="pos" updates="constant" val="(0, -0.2)" valType="code"/>
         <Param name="flip" updates="constant" val="" valType="str"/>
@@ -464,7 +464,7 @@
       <Param name="nReps" updates="None" val="4" valType="code"/>
       <Param name="endPoints" updates="None" val="[0, 1]" valType="num"/>
       <Param name="conditions" updates="None" val="[{'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'lenoga', 'Freq1': u'high', 'img_train': u'Stims/p0.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'kilonu', 'Freq1': u'high', 'img_train': u'Stims/p1.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'gahemi', 'Freq1': u'high', 'img_train': u'Stims/p2.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'nowahi', 'Freq1': u'high', 'img_train': u'Stims/p3.bmp'}, {'label1': u'mipuwe', 'Freq1': u'high', 'img_train': u'Stims/p4.bmp'}, {'label1': u'mipuwe', 'Freq1': u'high', 'img_train': u'Stims/p4.bmp'}, {'label1': u'hekipo', 'Freq1': u'med', 'img_train': u'Stims/p5.bmp'}, {'label1': u'hekipo', 'Freq1': u'med', 'img_train': u'Stims/p5.bmp'}, {'label1': u'gulika', 'Freq1': u'med', 'img_train': u'Stims/p6.bmp'}, {'label1': u'gulika', 'Freq1': u'med', 'img_train': u'Stims/p6.bmp'}, {'label1': u'howine', 'Freq1': u'med', 'img_train': u'Stims/p7.bmp'}, {'label1': u'howine', 'Freq1': u'med', 'img_train': u'Stims/p7.bmp'}, {'label1': u'womeku', 'Freq1': u'low', 'img_train': u'Stims/p8.bmp'}, {'label1': u'lamupo', 'Freq1': u'low', 'img_train': u'Stims/p9.bmp'}, {'label1': u'kugowi', 'Freq1': u'low', 'img_train': u'Stims/pp1.bmp'}, {'label1': u'pigalo', 'Freq1': u'low', 'img_train': u'Stims/pp2.bmp'}]" valType="str"/>
-      <Param name="Selected rows" updates="None" val="0:1" valType="str"/>
+      <Param name="Selected rows" updates="None" val="" valType="str"/>
     </LoopInitiator>
     <Routine name="train_display"/>
     <Routine name="train_input"/>
