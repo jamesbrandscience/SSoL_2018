@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 This experiment was created using PsychoPy2 Experiment Builder (v1.85.1),
-    on Sun Aug 19 13:02:16 2018
+    on Mon Aug 20 11:12:45 2018
 If you publish work using this script please cite the PsychoPy publications:
     Peirce, JW (2007) PsychoPy - Psychophysics software in Python.
         Journal of Neuroscience Methods, 162(1-2), 8-13.
@@ -69,9 +69,9 @@ instuctionsClock = core.Clock()
 ISI = core.StaticPeriod(win=win, screenHz=expInfo['frameRate'], name='ISI')
 instr1 = visual.TextStim(win=win, name='instr1',
     text=u'\ufeff\nWelcome to the planet Alpha-3-6a in a galaxy far, far away. We have encountered an intelligent alien life form with its own form of language. You must try to learn this language as best you can.\n\nDon\u2019t worry if you feel overwhelmed\u2014the alien knows that this is a difficult task for you to master, and it will do its best to understand everything that you say. \n\n\npress SPACE to continue.\n',
-    font='Arial',
+    font=u'Arial',
     pos=[0, 0], height=0.075, wrapWidth=1.8, ori=0, 
-    color='black', colorSpace='rgb', opacity=1,
+    color=u'black', colorSpace='rgb', opacity=1,
     depth=-1.0);
 
 # Initialize components for Routine "instructions2"
